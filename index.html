@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Calculadora de Assinatura</h1>
+        <div class="card">
+            <div class="card-body">
+                <form id="subscription-form">
+                    <div class="row mb-3">
+                        <div class="col-md-4">
+                            <label for="basePrice" class="form-label">Preço:</label>
+                            <input type="number" class="form-control" id="basePrice" value="30.00">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="discountThreshold" class="form-label">Desc por Space:</label>
+                            <input type="number" class="form-control" id="discountThreshold" value="10">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="discountRate" class="form-label">Taxa de Des (%):</label>
+                            <input type="number" class="form-control" id="discountRate" value="50">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="affiliateCommissionRate" class="form-label">Comissão do Afiliado (%):</label>
+                            <input type="number" class="form-control" id="affiliateCommissionRate" value="60">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="ambassadorCommissionRate" class="form-label">Comissão do Embaixador (%):</label>
+                            <input type="number" class="form-control" id="ambassadorCommissionRate" value="20">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="spaces" class="form-label">Número de Espaços:</label>
+                        <input type="range" class="form-control" id="spaces" value="1" min="1" max="100" required>
+                        <span id="space-value">1</span>
+                    </div>
+                </form>
+                <div class="result mt-4">
+                    <p id="total-price">Preço Total: R$ 30,00</p>
+                    <p id="total-price-discounted">Preço Total com Desconto: R$ 30,00</p>
+                    <p id="affiliate-commission">Comissão do Afiliado: R$ 18,00</p>
+                    <p id="ambassador-commission">Comissão do Embaixador: R$ 6,00</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>
